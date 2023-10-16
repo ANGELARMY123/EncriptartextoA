@@ -1,20 +1,31 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>PAOLA</title>
 </head>
 <body>
-    <h1>Paola</h1>
-    <p>Ingresa un mensaje</p>
+    <div class="container">
+        <h1>ENCRIPTAR Y DESENCRIPTAR TEXTOS</h1>
+        
 
-    <label for="message">Mensaje:</label>
-    <input type="text" id="message" placeholder="Ingresa tu mensaje" /><br><br>
+        <div class="input-container">
+            <label for="message">Mensaje:</label>
+            <input type="text" id="message" placeholder="Ingresa tu mensaje" />
+        </div>
 
-    <button onclick="encrypt()">Encriptar</button>
-    <button onclick="decrypt()">Desencriptar</button>
+        <button id="button" onclick="encrypt()">Encriptar</button>
+        <button id="resetButton" onclick="decrypt()">Desencriptar</button>
 
-    <p>Resultado: <span id="result"></span></p>
+        <div class="result-container">
+            <p>Resultado:</p>
+            <span id="result"></span>
+        </div>
+
+        <div class="image-container">
+            <img id="Image" src="https://w7.pngwing.com/pngs/443/436/png-transparent-book-closed-brown-hard-cover-title-blank-school-library-read.png"/>
+        </div>
+    </div>
 
     <script src="pao.js"></script>
 </body>

@@ -1,0 +1,63 @@
+
+body {
+    background-color: #fbc7cf; /* Fondo rosa */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-image: url('https://img.freepik.com/vector-premium/marco-hojas-flores-mariposas-alrededor-anuncios-importantes-dentro-marco-plantas-todas-partes-e-informacion-reciente-caja-floral-nuevas-ideas_424947-7480.jpg'); /* Ruta de la imagen de fondo */
+    
+    padding: 20px;
+    margin: 100px;
+    display: inline-block;
+}
+
+.input-container {
+    margin: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ffd700; /* Bordes dorados */
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: hsl(312, 52%, 71%); /* Azul fuerte */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+
+button#resetButton {
+    background-color: hsl(312, 52%, 71%); /* Azul fuerte */
+}
+
+.result-container {
+    margin: 10px;
+}
+
+span#result {
+    font-size: 20px; /* Texto más grande */
+    font-weight: bold;
+}
+
+.image-container {
+    margin: 10px;
+}
+
+img#Image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
