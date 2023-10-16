@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PAOLA</title>
+</head>
+<body>
+    <h1>ANGELICA</h1>
+    <p>Ingresa un mensaje</p>
+
+    <label for="message">Mensaje:</label>
+    <input type="text" id="message" placeholder="Ingresa tu mensaje" /><br><br>
+
+    <button onclick="encrypt()">Encriptar</button>
+    <button onclick="decrypt()">Desencriptar</button>
+
+    <p>Resultado: <span id="result"></span></p>
+
+    <script>
+        var vowelsReplacement = {
+            'a': 'army',
+            'e': 'especial',
+            'i': 'iris',
+            'o': 'orgulloso',
+            'u': 'unicornio',
+            'b': 'besos', 
+        };
+
+        function encrypt() {
+            var message = document.getElementById("message").value;
+            if (message) {
+                var result = message.replace(/[aeioub]/g, function(match) {
+                    return vowelsReplacement[match] || match;
+                });
+                document.getElementById("result").innerText = result;
+            }
+        }
+
+        function decrypt() {
+            var message = document.getElementById("message").value;
+            if (message) {
+                // Invierte el proceso de encriptación
+                var result = message;
+                for (var vowel in vowelsReplacement) {
+                    if (vowelsReplacement.hasOwnProperty(vowel)) {
+                        var regex = new RegExp(vowelsReplacement[vowel], "g");
+                        result = result.replace(regex, vowel);
+                    }
+                }
+                document.getElementById("result").innerText = result;
+            }
+        }
+    </script>
+</body>
+</html>
